@@ -137,7 +137,7 @@ def play(board)
       play(board)
     end
 
-    move(board, place)
+    move(board, place, current_player(board))
 
     display_board(board)
 

@@ -42,6 +42,15 @@ def current_player(board)
 end
 
 # Helper Method
+def valid_move?(board, choice)
+  if choice >= 0 && choice <= 8 && position_taken(board, choice)
+    return true
+  else
+    return false
+  end
+end
+
+
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
@@ -124,7 +133,7 @@ def play(board)
     puts "Enter a number between 1-9"
     input = gets.strip
     place = input_to_index(input)
-    if position_taken?(board, place)
+    if !valid_move(board, place)
       play(board)
     end
 

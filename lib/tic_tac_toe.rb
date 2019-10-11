@@ -17,6 +17,19 @@ def move(board_array, pos, char)
 end
 
 
+def turn(board)
+  puts "Please enter 1-9:"
+  choice = gets.chomp
+  pos = input_to_index(choice)
+  if valid_move?(board, pos)
+    move(board, pos)
+    display_board(board)
+  else
+    display_board(board)
+    turn(board)
+  end
+end
+
 
 def turn_count(board)
   counter = 0
@@ -129,13 +142,7 @@ end
 
 def play(board)
   while !over?
-    display_board(board)
-    puts "Enter a number between 1-9"
-    input = gets.strip
-    place = input_to_index(input)
-    if !valid_move?(board, place)
-      play(board)
-    end
+    turn(board)
 
     move(board, place, current_player(board))
 

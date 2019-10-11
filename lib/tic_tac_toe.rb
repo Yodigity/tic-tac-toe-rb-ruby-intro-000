@@ -134,7 +134,7 @@ end
 def winner(board)
   if won?(board)
     win_place = won?(board)[0]
-    puts "Congratulations #{board[win_place]}" 
+    return board[win_place]
   else
     nil
   end

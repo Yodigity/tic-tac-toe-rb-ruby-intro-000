@@ -147,5 +147,5 @@ def play(board)
 
 
   end
-  winner(board)
+  puts "Congratulations #{winner(board)}"
 end

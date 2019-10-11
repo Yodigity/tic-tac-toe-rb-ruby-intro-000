@@ -120,6 +120,16 @@ end
 
 def play(board)
   while !over?
+    display_board(board)
+    puts "Enter a number between 1-9"
+    input = gets.strip
+    place = input_to_index(input)
+    if position_taken?(board, place) 
+      play(board)
+    end
     
+    move(board, place)
+    
+    display_board(board)
 
   end

@@ -43,7 +43,7 @@ end
 
 # Helper Method
 def valid_move?(board, choice)
-  if choice >= 0 && choice <= 8 && position_taken(board, choice)
+  if choice >= 0 && choice <= 8 && position_taken?(board, choice)
     return true
   else
     return false

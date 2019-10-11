@@ -22,7 +22,7 @@ def turn(board)
   choice = gets.chomp
   pos = input_to_index(choice)
   if valid_move?(board, pos)
-    move(board, pos)
+    move(board, pos, current_player(board))
     display_board(board)
   else
     display_board(board)
@@ -144,11 +144,7 @@ def play(board)
   while !over?
     turn(board)
 
-    move(board, place, current_player(board))
-
-
-
-    display_board(board)
+    
 
   end
 end

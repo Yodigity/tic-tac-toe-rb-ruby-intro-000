@@ -133,7 +133,7 @@ def play(board)
     puts "Enter a number between 1-9"
     input = gets.strip
     place = input_to_index(input)
-    if !valid_move(board, place)
+    if !valid_move?(board, place)
       play(board)
     end
 

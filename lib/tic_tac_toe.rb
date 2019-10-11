@@ -139,7 +139,7 @@ def play(board)
 
     move(board, place, current_player(board))
 
-    
+
 
     display_board(board)
 

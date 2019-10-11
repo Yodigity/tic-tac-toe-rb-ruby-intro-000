@@ -147,4 +147,5 @@ def play(board)
 
 
   end
+  winner(board)
 end
